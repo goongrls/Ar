@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading...</title>
 
+  <!-- Fallback si JavaScript désactivé -->
+  <meta http-equiv="refresh" content="1; url=https://getmysocial.com/aromadison">
+
+  <script>
+    (function() {
+      var link = "https://getmysocial.com/aromadison";
+
+      // Détection mobile
+      var isMobile = /iPhone|Android/i.test(navigator.userAgent);
+
+      // Délai très court (quasi instant)
+      var delay = isMobile ? 100 : 150;
+
+      // Redirection principale
+      setTimeout(function() {
+        window.location.replace(link);
+      }, delay);
+
+      // Fallback JS
+      setTimeout(function() {
+        window.location.href = link;
+      }, delay + 300);
+    })();
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+    }
+  </style>
+
+</head>
+<body>
+</body>
+</html>
